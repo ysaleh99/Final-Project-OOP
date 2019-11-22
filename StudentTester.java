@@ -73,11 +73,48 @@ public class StudentTester {
 		} while (checker==false);
 		
 		System.out.println("Thank you for using our system!");
-		/*
-		int id2 = student2.getStudentID();
-		String name2 = student2.getName();
-		System.out.println("ID 2: " + id2);
-		System.out.println("Name 2: " + name2);
-		*/
+
 	}
+	
+	public static int inputStudentID() { //return non-negative number
+		 int studentID = 0;
+		 System.out.println("Please enter the student ID");
+		 Scanner scan = new Scanner(System.in);
+		 try {
+		     studentID = scan.nextInt();
+		} catch (InputMismatchException e) {			
+			System.out.println("Id must be a number");		
+			inputStudentID();
+		}		
+		if (studentID < 0 ) {
+			System.out.println("Id cannot be negative");		
+			studentID = inputStudentID()();
+		}
+		 return studentID;
+	 }
+	
+	public static int inputName() { //return non-negative number
+		 String name = 0;
+		 System.out.println("Please enter the name");
+		 Scanner scan = new Scanner(System.in);
+		 name = scan.nextLine();
+		 if (!isNumeric(name)) { //if valid
+			 return name;		 	
+		}else {
+			System.out.println("Please enter a valid name");
+			inputName();
+		}
+		 return studentID;
+	 }
+
+	
+	
+	public static boolean isNumeric(String str) { 
+		  try {  
+		    Double.parseDouble(str);  
+		    return true;
+		  } catch(NumberFormatException e){  
+		    return false;  
+		  }  
+		}
 }
