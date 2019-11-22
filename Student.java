@@ -1,6 +1,6 @@
-package Week_3;
+package final_project;
 
-public class Student {
+public class Student extends Person {
 	private String name;
 	private int student_id;
 	private double balance;
