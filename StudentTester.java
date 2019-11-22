@@ -6,21 +6,25 @@ public class StudentTester {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//Student student1 = new Student();
-		Student student2 = new Student("Alex Alvero", 180005066);
+		
+		Scanner in = new Scanner(System.in);
+		System.out.println("Welcome to Rutgers Student Financial Account.");
+		System.out.print("\n Enter name: ");
+		String name = in.nextLine();
+		System.out.print("\n Enter ID#: ");
+		int iD = in.nextInt();
+		
+		
 		Student student3 = new Student();
-		/*
-		int id = student1.getStudentID();
-		String name = student1.getName();
-		System.out.println("ID 1: " + id);
-		System.out.println("Name 1: " + name);
-		 */
-		student3.setName("Youssef Saleh");
-		student3.setStudentID(180007048);
+		
+		
+		student3.setName(name);
+		student3.setStudentID(iD);
+		System.out.println();
 		System.out.println("Student Name: " + student3.getName());
 		System.out.println("StudentID: " + student3.getStudentID());
 		System.out.println();
 		
-		Scanner in = new Scanner(System.in);
 		System.out.print("Would you like to check balance or deposit money? (please type \"balance\" or \"deposit\", and press enter): ");
 		boolean checker = false;
 		do {
