@@ -1,5 +1,7 @@
 package final_project;
 
+import java.util.ArrayList;
+
 public class Student extends Person {
 	private String name;
 	private int student_id;
@@ -39,6 +41,12 @@ public class Student extends Person {
 	
 	public double getBalance() {
 		return balance;
+	}
+
+	@Override
+	ArrayList<String> getPeople() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
